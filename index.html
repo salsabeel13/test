@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ورشة الخشب | مشروع تجريبي</title>
+  <meta name="description" content="صفحة تجريبية لورشة نجارة وهمية" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo">ورشة<span>الخشب</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="القائمة" aria-expanded="false">☰</button>
+      <nav class="nav" id="nav">
+        <a href="#home">الرئيسية</a>
+        <a href="#services">خدماتنا</a>
+        <a href="#products">أعمالنا</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero__content">
+        <p class="badge">نجارة وتفصيل أثاث</p>
+        <h1>نحول الخشب إلى <span>قطع فنية</span> تعيش معاك سنين</h1>
+        <p class="lead">تفصيل غرف نوم، مطابخ، ودواليب بأنواع خشب طبيعي: زان، موسكي، وأرو، بتشطيب عالي الجودة.</p>
+        <div class="hero__actions">
+          <a href="#products" class="btn btn--primary">شوف أعمالنا</a>
+          <a href="#contact" class="btn btn--ghost">اطلب عرض سعر</a>
+        </div>
+        <ul class="stats">
+          <li><strong data-count="250">0</strong><span>مشروع منفذ</span></li>
+          <li><strong data-count="12">0</strong><span>سنة خبرة</span></li>
+          <li><strong data-count="98">0</strong><span>% عملاء راضيين</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section__title">خدماتنا</h2>
+        <div class="grid grid--3">
+          <article class="card">
+            <div class="card__icon">🛏️</div>
+            <h3>غرف نوم</h3>
+            <p>تفصيل غرف نوم كاملة بخشب زان طبيعي وتشطيب لاكر أو دوكو.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">🍳</div>
+            <h3>مطابخ</h3>
+            <p>مطابخ خشب مقاومة للرطوبة بتصميم عملي يستغل كل سنتيمتر.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">🚪</div>
+            <h3>أبواب ودواليب</h3>
+            <p>أبواب ودواليب حائط بمقاسات مخصوصة حسب مساحة المكان.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="section section--alt" id="products">
+      <div class="container">
+        <h2 class="section__title">أعمالنا</h2>
+
+        <div class="filters" id="filters">
+          <button class="filter is-active" data-filter="all">الكل</button>
+          <button class="filter" data-filter="bedroom">غرف نوم</button>
+          <button class="filter" data-filter="kitchen">مطابخ</button>
+          <button class="filter" data-filter="doors">أبواب</button>
+        </div>
+
+        <div class="grid grid--3" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container contact">
+        <h2 class="section__title">تواصل معنا</h2>
+        <form id="contactForm" class="form" novalidate>
+          <label>
+            الاسم
+            <input type="text" name="name" placeholder="اكتب اسمك" required />
+            <small class="error" data-for="name"></small>
+          </label>
+          <label>
+            رقم الموبايل
+            <input type="tel" name="phone" placeholder="01xxxxxxxxx" required />
+            <small class="error" data-for="phone"></small>
+          </label>
+          <label>
+            تفاصيل الطلب
+            <textarea name="message" rows="4" placeholder="عايز تفصل إيه؟"></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary">إرسال الطلب</button>
+          <p class="form__status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> ورشة الخشب — مشروع تجريبي وهمي</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="للأعلى">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
